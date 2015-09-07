@@ -225,7 +225,13 @@ class Bot():
         if i<=int(os.environ.get('submit')):
             #title is first sentence
             title = re.split("(?<=[.?!]) ",text,maxsplit=1)[0]
-            r.submit(subreddit,title,text=text)
+            #body is everything else, if anything at all
+            try:
+                body = re.split("(?<=[.?!]) ",text,maxsplit=1)[1]
+            else:
+                body=""
+                
+            r.submit(subreddit,title,text=body)
         elif i<=int(os.environ.get('parent')):
             post = self.get_random_new(10)
             post.add_comment(text)
