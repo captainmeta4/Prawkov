@@ -228,7 +228,7 @@ class Bot():
             #body is everything else, if anything at all
             try:
                 body = re.split("(?<=[.?!]) ",text,maxsplit=1)[1]
-            else:
+            except:
                 body=""
                 
             r.submit(subreddit,title,text=body)
