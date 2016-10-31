@@ -4,14 +4,12 @@ import os
 import random
 import re
 
-r=praw.Reddit("Markov user simulator bot by /u/captainmeta4")
+r=praw.Reddit("Markov user simulator for /r/xkcd halloween by /u/captainmeta4")
 
 ###Configs
 
 #userlist
 
-
-subreddit = r.get_subreddit('AdminSimulator')
 
 #oauth stuff
 #client_id = os.environ.get('client_id')
