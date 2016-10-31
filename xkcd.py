@@ -206,8 +206,11 @@ class Bot():
             return
         
         print(text)
-            
-        comment.reply(text)
+        
+        try:
+            comment.reply(text)
+        except praw.errors.InvalidComment:
+            pass
 
     def stream(self):
 
