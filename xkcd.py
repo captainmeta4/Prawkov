@@ -231,6 +231,11 @@ class Bot():
         self.auth()
         
         for comment in self.stream():
+            
+            #auto-kill at midnight pst
+            if time.time()>1477983599:
+                break
+                
             if comment.author.name in ["markov_ghost", "AutoModerator"]:
                 continue
             
