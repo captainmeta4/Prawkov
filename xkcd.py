@@ -236,7 +236,7 @@ class Bot():
             if time.time()>1477983599:
                 break
                 
-            if comment.author.name in ["markov_ghost", "AutoModerator"]:
+            if comment.author.name in ["markov_ghost", "AutoModerator", "xkcd_bot"]:
                 continue
             
             self.run_cycle(comment=comment)
